@@ -1,0 +1,18 @@
+{
+  "id": "hugo-portada",
+  "name": "Portada",
+  "framework": "hugo",
+  "design": "portada",
+  "tier": "free",
+  "description": "Hugo con portada, tags, categorías y modo oscuro.",
+  "previewUrl": "https://storia-templates.github.io/hugo-portada/",
+  "screenshots": [],
+  "features": [
+    "Modo oscuro",
+    "Tags y categorías",
+    "Imagen de portada"
+  ],
+  "contentPath": "content/posts/{{ slug }}.md",
+  "frontmatterTemplate": "title: \"{{ title }}\"\ndate: \"{{ published_at_iso }}\"\ndescription: \"{{ excerpt }}\"\ntags: [{{ tags_yaml_array }}]\ncategories: [{{ categories_yaml_array }}]\nimage: \"{{ seo_image }}\"\ndraft: false",
+  "pagesBuild": "workflow"
+}

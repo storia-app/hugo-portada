@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <article class="wrap narrow">
+    <header class="post-header">
+      {{ with .GetTerms "tags" }}<div class="pills">{{ range . }}<a class="pill" href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{ end }}</div>{{ end }}
+      <h1>{{ .Title }}</h1>
+      <time class="meta" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+    </header>
+    {{ with .Params.image }}<img class="post-cover" src="{{ . }}" alt="">{{ end }}
+    <div class="prose">{{ .Content }}</div>
+  </article>
+{{ end }}

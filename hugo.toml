@@ -1,0 +1,25 @@
+# Edit title and params to make the blog yours. baseURL is set by the
+# GitHub Pages workflow, so the same site works at <usuario>.github.io or
+# under /<repo>/.
+baseURL = "http://localhost:1313/"
+locale = "es"
+title = "Mi blog"
+
+[params]
+  description = "Notas sobre lo que aprendo construyendo software."
+  author = "Tu nombre"
+
+# Storia writes each article to content/posts/<slug>.md (see storia.json).
+[permalinks]
+  # The file name (the slug Storia gives each article) is the URL.
+  posts = "/blog/:contentbasename/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup.highlight]
+  noClasses = false
+
+[outputs]
+  home = ["html", "rss"]

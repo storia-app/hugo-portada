@@ -1,0 +1,13 @@
+<div class="cards">
+  {{ range . }}
+    <a class="card" href="{{ .Permalink }}">
+      {{ with .Params.image }}<img class="card-cover" src="{{ . }}" alt="" loading="lazy">{{ else }}<div class="card-cover" aria-hidden="true"></div>{{ end }}
+      <div class="card-body">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+        <h2>{{ .Title }}</h2>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+        {{ with .GetTerms "tags" }}<div class="pills">{{ range first 3 . }}<span class="pill">{{ .LinkTitle }}</span>{{ end }}</div>{{ end }}
+      </div>
+    </a>
+  {{ end }}
+</div>
