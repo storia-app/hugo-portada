@@ -2,7 +2,7 @@
 
 Hugo con portada, tags, categorías y modo oscuro.
 
-Plantilla de blog de [Storia](https://github.com/storia-app). Demo: https://storia-templates.github.io/hugo-portada/
+Plantilla de blog de [Storia](https://github.com/storia-app). Demo: https://storia-app.github.io/hugo-portada/
 
 - Modo oscuro
 - Tags y categorías
